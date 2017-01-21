@@ -1,0 +1,50 @@
+<html lang="en">
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>IP Tracker</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/css/style.css">
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">IP Tracker</h3>
+            </div>
+          </div>
+
+          <div class="inner cover">
+						<h1><%= @location %></h1>
+          	<p class="lead">
+							Enter an IP Address to Trace IP Location.
+						</p>
+						<form action="/" method="POST" class="form">
+							<div class="form-group">
+								<input type="text" name="ip_address" class="form-control">
+							</div>
+							<p class="lead">
+								<input type="submit" class="btn btn-lg btn-secondary">
+							</p>
+						</form>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p><%= Time.now.year %> Sinatra app using <a href="http://www.rubygeocoder.com/">Geocoder</a> Gem</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+	</body>
+</html>
