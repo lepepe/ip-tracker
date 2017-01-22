@@ -1,5 +1,5 @@
 <div class="inner cover">
-  <table class="table table-hover">
+  <table class="table table-hover table-sm">
     <thead>
       <tr>
         <th colspan="2">Lookup IP Address Location For IP: <%= @location[0].data["ip"] %></th>
@@ -8,10 +8,17 @@
     <tbody>
       <% @location[0].data.each do |key, value| %>
       <tr>
-        <td><%= key %></td>
+        <td><%= key.gsub("_", " ").capitalize %></td>
         <td><%= value %></td>
       </tr>
       <% end %>
     </tbody>
   </table>
+
+  <iframe
+    width="100%"
+    height="250"
+    frameborder="0" style="border:0"
+    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA1eNpk2xlLeh8SofUttUQ5TtA7-NlvlCk&q=<%= @location[0].data["city"] %>+<%= @location[0].data["country_name"] %>" allowfullscreen>
+  </iframe>
 </div>
