@@ -1,0 +1,42 @@
+<html lang="en">
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>IP Tracker</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/css/style.css">
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">IP Tracker</h3>
+							<% if request.path_info == "/tracker" %>
+								<nav class="nav nav-masthead">
+	                <a class="nav-link active" href="/">Back to Home</a>
+	              </nav>
+							<% end %>
+            </div>
+          </div>
+
+          <%= yield %>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p><%= Time.now.year %> Sinatra app using <a href="http://www.rubygeocoder.com/">Geocoder</a> Gem</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+	</body>
+</html>
